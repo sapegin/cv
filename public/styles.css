@@ -192,26 +192,28 @@ li {
 	}
 	@page {
 		size: A4 portrait;
-		margin: 1rem;
+		margin: 0.5cm 1cm;
 	}
 	html,
 	body {
 		width: 210mm;
-		height: calc(300mm * 2);
+		/* HACK: Make the line occupy full width, I don't know why the number
+		   doesn't match 297mm of A4 and seems to be dependent on something else */
+		height: calc(317mm * 2);
 	}
 	html {
 		font-size: 11pt;
 	}
+	body {
+		flex-wrap: nowrap;
+	}
 	.sidebar {
-		padding: 0 1rem 0 0;
+		padding: 0 1cm 0 0;
 		border-right: 1px solid var(--color-border);
 		background-color: initial;
 	}
-	.header img {
-		max-width: 10rem;
-	}
 	.main {
-		padding: 0 0 0 1rem;
+		padding: 0 0 0 1cm;
 	}
 	.buttons {
 		display: none;
