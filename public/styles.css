@@ -3,7 +3,7 @@
 	--color-border: #888;
 	--color-light: #f2f2f2;
 	--color-accent: #f56a00;
-	--sidebar-width: 25%;
+	--sidebar-width: 100%;
 }
 
 * {
@@ -41,10 +41,12 @@ li {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .sidebar {
 	flex-basis: var(--sidebar-width);
+	flex-shrink: 0;
 	padding: 1rem;
 	background-color: var(--color-light);
 	line-height: 1.4;
@@ -110,7 +112,6 @@ li {
 }
 
 .main {
-	flex-basis: calc(100% - var(--sidebar-width));
 	padding: 1rem;
 	line-height: 1.5;
 	font-size: 0.9rem;
@@ -171,9 +172,21 @@ li {
 	font-weight: normal;
 	font-style: italic;
 }
-.work-experience ul {
-	columns: 2;
-	column-gap: 0.5rem;
+
+@media (min-width: 35rem) {
+	:root {
+		--sidebar-width: 25%;
+	}
+	.container {
+		flex-wrap: nowrap;
+	}
+}
+
+@media print, (min-width: 60rem) {
+	.work-experience ul {
+		columns: 2;
+		column-gap: 0.5rem;
+	}
 }
 
 @media print {
