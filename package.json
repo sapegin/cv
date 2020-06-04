@@ -1,0 +1,36 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Artem Sapegin",
+    "url": "https://sapegin.me"
+  },
+  "homepage": "https://github.com/sapegin/cv",
+  "repository": "sapegin/cv",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "npm run format",
+    "format": "prettier --loglevel warn --write \"**/*.{css,html}\"",
+    "make-pdf": "puppeteer-pdf-generator --path $(pwd)/public/index.html --out public/artem-sapegin.pdf --format A4"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.8",
+    "prettier": "^2.0.5",
+    "puppeteer-pdf-generator": "^1.0.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,html}": "prettier --write"
+  }
+}
