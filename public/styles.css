@@ -198,6 +198,9 @@ li {
 	.main {
 		padding: 0 0 0 1rem;
 	}
+	.buttons {
+		display: none;
+	}
 	a {
 		text-decoration: none;
 	}
