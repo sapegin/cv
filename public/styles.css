@@ -187,6 +187,11 @@ li {
 		columns: 2;
 		column-gap: 0.5rem;
 	}
+	.work-experience li {
+		/* Don't wrap list items to the next column in Firefox:
+		   https://stackoverflow.com/a/18139561/1973105 */
+		display: table;
+	}
 }
 
 @media print {
