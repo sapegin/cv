@@ -114,6 +114,9 @@ li {
 	font-size: 0.9rem;
 }
 
+.main section {
+	margin-bottom: 3rem;
+}
 .main h2 {
 	margin-bottom: 1rem;
 	line-height: 1.2;
@@ -139,7 +142,7 @@ li {
 }
 
 .work-experience article {
-	margin-bottom: 1.5rem;
+	margin-bottom: 2rem;
 }
 .work-experience header {
 	margin-bottom: 1rem;
