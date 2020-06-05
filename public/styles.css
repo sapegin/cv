@@ -134,7 +134,8 @@ li {
 	font-size: var(--font-size-xxl);
 	font-weight: normal;
 }
-.main p,
+.main section > p,
+.main article > p,
 .main ul {
 	margin-bottom: var(--space-m);
 }
@@ -153,33 +154,38 @@ li {
 .work-experience article {
 	margin-bottom: var(--space-l);
 }
-.work-experience header {
-	margin-bottom: var(--space-m);
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: baseline;
-	line-height: var(--line-height-heading);
-	font-size: var(--font-size-m);
-}
-.work-experience header p {
-	margin-top: var(--space-xs);
-	margin-bottom: 0;
-	flex-basis: 100%;
-	font-size: var(--font-size-m);
-}
-.work-experience header h3 {
-	font-size: var(--font-size-l);
-	font-weight: bold;
-}
-.work-experience header small {
-	font-size: var(--font-size-s);
-}
 .work-experience h4 {
 	margin-bottom: var(--space-s);
 	font-size: var(--font-size-xs);
 	font-weight: normal;
 	font-style: italic;
+}
+
+.workplace {
+	margin-bottom: var(--space-m);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	line-height: var(--line-height-heading);
+	font-size: var(--font-size-m);
+}
+.workplace__name {
+	margin: 0 0.4em 0 0;
+	font-size: var(--font-size-l);
+	font-weight: bold;
+}
+.workplace__site {
+	font-weight: normal;
+}
+.workplace__dates {
+	margin: 0;
+	font-size: var(--font-size-s);
+	font-style: italic;
+}
+.workplace__meta {
+	margin: var(--space-xs) 0 0 0;
+	flex-basis: 100%;
+	font-size: var(--font-size-m);
 }
 
 @media (min-width: 35rem) {
