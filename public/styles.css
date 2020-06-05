@@ -91,7 +91,8 @@ li {
 	margin-bottom: var(--space-l);
 }
 .buttons a {
-	padding: 0.1em 0.5em;
+	display: inline-block;
+	padding: 0.15em 0.5em;
 	border: 1px solid;
 	border-radius: 0.2em;
 	text-decoration: none;
