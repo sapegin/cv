@@ -206,7 +206,11 @@ li {
 		flex-wrap: nowrap;
 	}
 }
-
+@media screen {
+	.phone {
+		display: none;
+	}
+}
 @media print, (min-width: 60rem) {
 	.work-experience ul {
 		columns: 2;
