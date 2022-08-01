@@ -88,10 +88,6 @@ li {
 	margin-bottom: var(--space-m);
 	font-size: var(--font-size-m);
 }
-.portrait {
-	width: 100%;
-	max-width: 100%;
-}
 .buttons {
 	margin-bottom: var(--space-l);
 }
