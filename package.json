@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "npm run format",
-    "format": "prettier --loglevel warn --write \"**/*.{css,html}\"",
+    "format": "prettier --log-level warn --write \"**/*.{css,html}\"",
     "make-pdf": "puppeteer-pdf-generator --path $(pwd)/public/index.html --out public/artem-sapegin.pdf --format A4"
   },
   "keywords": [],
