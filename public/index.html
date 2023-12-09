@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -18,11 +18,12 @@
 			<header class="header">
 				<h1>Artem Sapegin</h1>
 				<p class="subtitle">Senior frontend engineer</p>
-				<p class="location">
-					Berlin, Germany
-				</p>
-				<section class="buttons">
-					<a href="artem-sapegin.pdf">Download PDF</a>
+				<p class="location">Berlin, Germany</p>
+				<section class="badges no-print">
+					<p class="badge">Looking for a job now</p>
+				</section>
+				<section class="buttons no-print">
+					<a href="artem-sapegin.pdf">Download as PDF</a>
 				</section>
 			</header>
 			<aside class="aside">
@@ -51,6 +52,9 @@
 							>blogging about frontend</a
 						>.
 					</p>
+					<p class="aside__looking no-print">
+						I’m looking for remote or work-from-home job now.
+					</p>
 					<p>
 						When I’m not writing code, I&nbsp;<a
 							href="https://sapegin.me/photos/"
@@ -73,9 +77,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>
-						Contacts
-					</h2>
+					<h2>Contacts</h2>
 					<ul>
 						<li class="phone">
 							<a href="tel:+4915259003798">+49 152 5900 3798</a>
@@ -115,25 +117,22 @@
 					</ul>
 				</section>
 				<section>
-					<h2>
-						Skills
-					</h2>
-					<ul>
-						<li>
-							<strong>JavaScript:</strong> TypeScript, ECMAScript20XX, Node.js
-						</li>
-						<li>
-							<strong>CSS:</strong> styled-components, styled-system,
-							vanilla-extract, Sass, CSS Modules, BEM
-						</li>
-						<li>
-							<strong>Frameworks:</strong> React, React Native, Astro, Gatsby
-						</li>
-						<li>
-							<strong>Testing:</strong> Jest, React Testing Library, Cypress
-						</li>
-						<li><strong>Misc:</strong> GraphQL, Storybook</li>
-					</ul>
+					<h2>Skills</h2>
+					<dl>
+						<dt>JavaScript</dt>
+						<dd>TypeScript, ECMAScript20XX, Node.js</dd>
+						<dt>CSS</dt>
+						<dd>
+							styled-components, styled-system, vanilla-extract, Sass, CSS
+							Modules, BEM
+						</dd>
+						<dt>Frameworks</dt>
+						<dd>React, React Native, Astro, Gatsby</dd>
+						<dt>Testing</dt>
+						<dd>Jest, Vitest, React Testing Library, Cypress</dd>
+						<dt>Misc</dt>
+						<dd>GraphQL, Storybook</dd>
+					</dl>
 				</section>
 			</aside>
 		</div>
@@ -143,20 +142,22 @@
 				<article>
 					<header class="workplace">
 						<h3 class="workplace__name">
-							Omio
-							<span class="workplace__site"
-								>(formerly GoEuro,
-								<a
-									href="https://www.omio.com/"
-									target="_blank"
-									rel="noopener noreferrer"
-									>omio.com</a
-								>)</span
+							<a
+								class="workplace__link"
+								href="https://www.omio.com/"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
+								Omio
+								<span class="workplace__site"
+									>(formerly GoEuro, <u>omio.com</u>)</span
+								>
+							</a>
 						</h3>
-						<p class="workplace__dates">December 2019 to present</p>
+
 						<p class="workplace__meta">
-							Senior frontend developer. Berlin, Germany
+							Senior frontend developer. Berlin, Germany. December 2019 to
+							present
 						</p>
 					</header>
 					<p>
@@ -187,29 +188,25 @@
 							Dozens of interviews with frontend developers of various levels:
 							technical and behavioral questions, coding exercises.
 						</li>
-						<li>
-							Mentoring of less senior teammates.
-						</li>
+						<li>Mentoring of less senior teammates.</li>
 					</ul>
 				</article>
 				<article>
 					<header class="workplace">
 						<h3 class="workplace__name">
-							Wayfair
-							<span class="workplace__site"
-								>(<a
-									href="https://www.wayfair.de/"
-									target="_blank"
-									rel="noopener noreferrer"
-									>wayfair.de</a
-								>)</span
+							<a
+								class="workplace__link"
+								href="https://www.wayfair.de/"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
+								Wayfair
+								<span class="workplace__site">(<u>wayfair.de</u>)</span>
+							</a>
 						</h3>
-						<p class="workplace__dates">
-							January 2018 to October 2019
-						</p>
 						<p class="workplace__meta">
-							Senior frontend developer. Berlin, Germany
+							Senior frontend developer. Berlin, Germany. January 2018 to
+							October 2019
 						</p>
 					</header>
 					<p>Flow, React, Sass, Jest, Enzyme, GraphQL.</p>
@@ -251,19 +248,19 @@
 				<article>
 					<header class="workplace">
 						<h3 class="workplace__name">
-							HERE Technologies
-							<span class="workplace__site"
-								>(<a
-									href="https://www.here.com/"
-									target="_blank"
-									rel="noopener noreferrer"
-									>here.com</a
-								>)</span
+							<a
+								class="workplace__link"
+								href="https://www.here.com/"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
+								HERE Technologies
+								<span class="workplace__site">(<u>here.com</u>)</span>
+							</a>
 						</h3>
-						<p class="workplace__dates">July 2015 to December 2017</p>
 						<p class="workplace__meta">
-							Senior frontend developer. Berlin, Germany
+							Senior frontend developer. Berlin, Germany. July 2015 to December
+							2017
 						</p>
 					</header>
 					<p>React, Sass, CSS Modules, Enzyme, React Styleguidist.</p>
@@ -292,19 +289,18 @@
 				<article>
 					<header class="workplace">
 						<h3 class="workplace__name">
-							Badoo
-							<span class="workplace__site"
-								>(<a
-									href="https://badoo.com/"
-									target="_blank"
-									rel="noopener noreferrer"
-									>badoo.com</a
-								>)</span
+							<a
+								class="workplace__link"
+								href="https://badoo.com/"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
+								Badoo
+								<span class="workplace__site">(<u>badoo.com</u>)</span>
+							</a>
 						</h3>
-						<p class="workplace__dates">2012 to 2015</p>
 						<p class="workplace__meta">
-							Senior JavaScript developer. Moscow, Russia
+							Senior JavaScript developer. Moscow, Russia. 2012–2015
 						</p>
 					</header>
 					<ul>
@@ -318,36 +314,43 @@
 				<article>
 					<header class="workplace">
 						<h3 class="workplace__name">
-							Mail.ru
-							<span class="workplace__site"
-								>(<a
-									href="https://mail.ru/"
-									target="_blank"
-									rel="noopener noreferrer"
-									>mail.ru</a
-								>)</span
+							<a
+								class="workplace__link"
+								href="https://mail.ru/"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
+								Mail.ru
+								<span class="workplace__site">(<u>mail.ru</u>)</span>
+							</a>
 						</h3>
-						<p class="workplace__dates">2010 to 2012</p>
 						<p class="workplace__meta">
-							Frontend developer. Moscow, Russia
+							Frontend developer. Moscow, Russia. 2010–2012
 						</p>
 					</header>
 					<ul>
 						<li>
 							Working on the frontend of the most popular Russian email service.
 						</li>
-						<li>
-							Internal office weather monitor (SVG via Raphaël).
-						</li>
+						<li>Internal office weather monitor (SVG via Raphaël).</li>
 					</ul>
 				</article>
 				<article>
 					<header class="workplace">
-						<h3 class="workplace__name">GeneGo</h3>
-						<p class="workplace__dates">2006 to 2010</p>
+						<h3 class="workplace__name">
+							<a
+								class="workplace__link"
+								href="https://portal.genego.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+								>GeneGo
+								<span class="workplace__site"
+									>(<u>portal.genego.com</u>)</span
+								></a
+							>
+						</h3>
 						<p class="workplace__meta">
-							JavaScript developer. Moscow, Russia
+							JavaScript developer. Moscow, Russia. 2006–2010
 						</p>
 					</header>
 					<ul>
@@ -439,9 +442,7 @@
 			</section>
 			<section>
 				<h2>Languages</h2>
-				<p>
-					English (fluent), Russian (native), and German (basic).
-				</p>
+				<p>English (fluent), Russian (native), and German (basic).</p>
 			</section>
 		</main>
 	</body>

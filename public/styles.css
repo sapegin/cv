@@ -1,9 +1,10 @@
 :root {
-	--color-text: #000;
+	--color-text: #3a3d40;
 	--color-bg: #fff;
 	--color-border: #888;
 	--color-light: #f2f2f2;
-	--color-accent: #f56a00;
+	--color-accent: #577290;
+	--color-hover: #c45a8d;
 	--space-xxs: 0.125rem;
 	--space-xs: 0.25rem;
 	--space-s: 0.5rem;
@@ -11,10 +12,10 @@
 	--space-l: 2rem;
 	--space-xl: 4rem;
 	--font-size-xs: 0.9rem;
-	--font-size-s: 0.8rem;
-	--font-size-m: 1rem;
-	--font-size-l: 1.2rem;
-	--font-size-xl: 1.4rem;
+	--font-size-s: 1rem;
+	--font-size-m: 1.1rem;
+	--font-size-l: 1.3rem;
+	--font-size-xl: 1.5rem;
 	--font-size-xxl: 2rem;
 	--font-size-xxxl: 4rem;
 	--line-height-body: 1.4;
@@ -45,12 +46,12 @@ a:visited,
 a:hover,
 a:focus,
 a:active {
-	color: var(--color-text);
+	color: var(--color-accent);
 }
 a:hover,
 a:focus,
 a:active {
-	color: var(--color-accent);
+	color: var(--color-hover);
 }
 a:focus {
 	outline: 1px dotted;
@@ -59,6 +60,7 @@ a:focus {
 
 li {
 	list-style-type: none;
+	page-break-inside: avoid;
 }
 
 .sidebar {
@@ -72,24 +74,21 @@ li {
 .header {
 	margin-bottom: var(--space-l);
 	line-height: var(--line-height-heading);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-m);
 }
 .header h1 {
-	margin-bottom: var(--space-m);
 	line-height: 0.9;
 	font-size: var(--font-size-xxxl);
 	font-weight: normal;
 }
 .subtitle {
-	margin-bottom: var(--space-m);
 	font-size: var(--font-size-xl);
 	font-weight: bold;
 }
 .location {
-	margin-bottom: var(--space-m);
 	font-size: var(--font-size-m);
-}
-.buttons {
-	margin-bottom: var(--space-l);
 }
 .buttons a {
 	display: inline-block;
@@ -103,6 +102,17 @@ li {
 .buttons a:focus {
 	outline: 0;
 	box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+.badge {
+	display: inline-block;
+	padding: 0.15em 0.5em;
+	border-radius: 0.2em;
+	text-decoration: none;
+	font-size: var(--font-size-s);
+	font-weight: bold;
+	color: var(--color-bg);
+	background-color: var(--color-hover);
 }
 
 .aside h2 {
@@ -125,10 +135,20 @@ li {
 	padding: 0;
 	margin-bottom: var(--space-s);
 }
+.aside dt {
+	margin-bottom: var(--space-xxs);
+	font-weight: bold;
+}
+.aside dd {
+	margin-bottom: var(--space-s);
+	hyphens: none;
+}
+.aside__looking {
+	font-weight: bold;
+}
 
 .main {
 	padding: var(--space-m);
-	font-size: var(--font-size-xs);
 }
 
 .main section {
@@ -143,6 +163,7 @@ li {
 .main section > p,
 .main article > p,
 .main ul {
+	font-size: var(--font-size-s);
 	margin-bottom: var(--space-m);
 }
 .main li {
@@ -151,10 +172,13 @@ li {
 	padding-left: 0.85em;
 }
 .main li::before {
-	content: '•';
+	content: '';
 	position: absolute;
-	left: 0;
-	color: var(--color-border);
+	left: 0.1em;
+	top: 0.6em;
+	width: 0.3em;
+	height: 0.3em;
+	background-color: var(--color-text);
 }
 
 .work-experience article {
@@ -169,9 +193,6 @@ li {
 
 .workplace {
 	margin-bottom: var(--space-m);
-	display: flex;
-	flex-wrap: wrap;
-	align-items: baseline;
 	line-height: var(--line-height-heading);
 	font-size: var(--font-size-m);
 }
@@ -180,18 +201,16 @@ li {
 	font-size: var(--font-size-l);
 	font-weight: bold;
 }
+.workplace__link {
+	text-decoration: none;
+}
 .workplace__site {
 	font-weight: normal;
 }
-.workplace__dates {
-	margin: 0;
-	font-size: var(--font-size-s);
-	font-style: italic;
-}
 .workplace__meta {
 	margin: var(--space-xs) 0 0 0;
-	flex-basis: 100%;
 	font-size: var(--font-size-m);
+	font-style: italic;
 }
 
 @media (min-width: 35rem) {
@@ -221,6 +240,14 @@ li {
 
 @media print {
 	:root {
+		--color-text: #000;
+		--color-bg: #fff;
+		--color-border: #888;
+		--color-light: #fff;
+		--color-accent: #000;
+		--font-size-xs: 0.8rem;
+		--font-size-s: 0.9rem;
+		--font-size-m: 1rem;
 		--sidebar-width: 32%;
 	}
 	@page {
@@ -233,6 +260,7 @@ li {
 		/* HACK: Make the line occupy full width, I don't know why the number
 		   doesn't match 297mm of A4 and seems to be dependent on something else */
 		height: calc(317mm * 2);
+		hyphens: none;
 	}
 	html {
 		font-size: 11pt;
@@ -248,7 +276,7 @@ li {
 	.main {
 		padding: 0 0 0 1cm;
 	}
-	.buttons {
+	.no-print {
 		display: none;
 	}
 	a {
