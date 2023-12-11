@@ -43,19 +43,16 @@ body {
 
 a:link,
 a:visited,
-a:hover,
 a:focus,
 a:active {
 	color: var(--color-accent);
 }
-a:hover,
-a:focus,
-a:active {
+a:hover {
 	color: var(--color-hover);
 }
 a:focus {
-	outline: 1px dotted;
-	outline-offset: 1px;
+	outline: 2px solid var(--color-hover);
+	outline-offset: 2px;
 }
 
 li {
@@ -90,7 +87,8 @@ li {
 .location {
 	font-size: var(--font-size-m);
 }
-.buttons a {
+
+.button {
 	display: inline-block;
 	padding: 0.15em 0.5em;
 	border: 1px solid;
@@ -98,10 +96,6 @@ li {
 	text-decoration: none;
 	font-size: var(--font-size-s);
 	font-weight: bold;
-}
-.buttons a:focus {
-	outline: 0;
-	box-shadow: 0 0 0 1px var(--color-accent);
 }
 
 .badge {
