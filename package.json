@@ -1,35 +1,30 @@
 {
-  "name": "cv",
-  "version": "1.0.0",
-  "private": true,
-  "author": {
-    "name": "Artem Sapegin",
-    "url": "https://sapegin.me"
-  },
-  "homepage": "https://github.com/sapegin/cv",
-  "repository": "sapegin/cv",
-  "license": "MIT",
-  "engines": {
-    "node": ">=10"
-  },
-  "scripts": {
-    "test": "npm run format",
-    "format": "prettier --log-level warn --write \"**/*.{css,html}\"",
-    "make-pdf": "puppeteer-pdf-generator --path $(pwd)/public/index.html --out public/artem-sapegin.pdf --format A4"
-  },
-  "keywords": [],
-  "devDependencies": {
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.8",
-    "prettier": "^3.1.0",
-    "puppeteer-pdf-generator": "^1.0.15"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{css,html}": "prettier --write"
-  }
+	"name": "cv",
+	"version": "1.0.0",
+	"private": true,
+	"author": {
+		"name": "Artem Sapegin",
+		"url": "https://sapegin.me"
+	},
+	"homepage": "https://github.com/sapegin/cv",
+	"repository": "sapegin/cv",
+	"license": "MIT",
+	"engines": {
+		"node": ">=24"
+	},
+	"scripts": {
+		"test": "npm run format",
+		"format": "prettier --log-level warn --write \"**/*.{css,html}\"",
+		"make-pdf": "node scripts/generate-pdf.mjs --path $(pwd)/public/index.html --out public/artem-sapegin.pdf",
+		"prepare": "husky"
+	},
+	"keywords": [],
+	"devDependencies": {
+		"husky": "9.1.7",
+		"nano-staged": "0.9.0",
+		"prettier": "3.8.1"
+	},
+	"nano-staged": {
+		"*.{css,html}": "prettier --write"
+	}
 }
