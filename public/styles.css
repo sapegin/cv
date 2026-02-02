@@ -149,6 +149,9 @@ li {
 .main section {
 	margin-bottom: var(--space-l);
 }
+.main section:last-child {
+	margin-bottom: 0;
+}
 .main h2 {
 	margin-bottom: var(--space-m);
 	line-height: var(--line-height-heading);
@@ -160,6 +163,11 @@ li {
 .main ul {
 	font-size: var(--font-size-s);
 	margin-bottom: var(--space-m);
+}
+.main section > p:last-child,
+.main article > p:last-child,
+.main ul:last-child {
+	margin-bottom: 0;
 }
 .main li {
 	position: relative;
