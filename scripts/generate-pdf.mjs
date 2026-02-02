@@ -18,6 +18,8 @@ await page.goto(`file://${options.path}`, {
 
 const pdf = await page.pdf({
 	format: 'A4',
+	// We need this for list item markers that use background-color
+	printBackground: true,
 });
 
 fs.writeFileSync(options.out, pdf);
