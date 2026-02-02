@@ -260,9 +260,6 @@ li {
 	html,
 	body {
 		width: 210mm;
-		/* HACK: Make the line occupy full width, I don't know why the number
-		   doesn't match 297mm of A4 and seems to be dependent on something else */
-		height: calc(317mm * 2);
 		hyphens: none;
 	}
 	html {
