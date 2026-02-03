@@ -158,6 +158,16 @@ li {
 	font-size: var(--font-size-xxl);
 	font-weight: normal;
 }
+.main dl {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: var(--space-xxs) var(--space-s);
+	font-size: var(--font-size-s);
+	margin-top: var(--space-s);
+}
+.main dt {
+	font-weight: bold;
+}
 .main section > p,
 .main article > p,
 .main ul {
