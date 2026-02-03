@@ -16,6 +16,7 @@
 		"test": "npm run format",
 		"format": "prettier --log-level warn --write \"**/*.{css,html}\"",
 		"make-pdf": "node scripts/generate-pdf.mjs --path $(pwd)/public/index.html --out public/artem-sapegin.pdf",
+		"postinstall": "npx puppeteer browsers install chrome",
 		"prepare": "husky"
 	},
 	"keywords": [],
