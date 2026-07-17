@@ -12,13 +12,30 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="styles.css" />
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Artem Sapegin",
+				"jobTitle": "Senior frontend engineer",
+				"email": "artem@sapegin.me",
+				"telephone": "+49 152 5900 3798",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Berlin",
+					"addressCountry": "Germany"
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<div class="sidebar">
 			<header class="header">
 				<h1>Artem Sapegin</h1>
-				<p class="subtitle">Senior frontend engineer</p>
-				<p class="location">Berlin, Germany (EU citizen)</p>
+				<p class="header-field header-field--title">
+					<span class="header-field__label sr-only">Title:</span>
+					Senior frontend engineer
+				</p>
 				<section class="badges no-print" hidden>
 					<p class="badge">Available for hire</p>
 				</section>
@@ -27,6 +44,56 @@
 				</section>
 			</header>
 			<aside class="aside">
+				<section>
+					<h2>Contacts</h2>
+					<ul>
+						<li class="contact-meta">
+							<span class="contact-meta__label sr-only">Location:</span>
+							Berlin, Germany
+						</li>
+						<li class="phone">
+							<a href="tel:+4915259003798">+49 152 5900 3798</a>
+						</li>
+						<li>
+							<a
+								href="mailto:artem@sapegin.me"
+								target="_blank"
+								rel="noopener noreferrer"
+								>artem@sapegin.me</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://sapegin.me/"
+								target="_blank"
+								rel="noopener noreferrer"
+								>sapegin.me</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://github.com/sapegin"
+								target="_blank"
+								rel="noopener noreferrer"
+								>github.com/sapegin</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://www.linkedin.com/in/artemsapegin/"
+								target="_blank"
+								rel="noopener noreferrer"
+								>linkedin.com/in/artemsapegin</a
+							>
+						</li>
+						<li class="contact-meta">
+							<span class="contact-meta__label sr-only"
+								>Work authorization:</span
+							>
+							EU citizen (no sponsorship required)
+						</li>
+					</ul>
+				</section>
 				<section>
 					<p>
 						I’ve been developing frontends for web applications serving millions
@@ -66,68 +133,46 @@
 					</p>
 				</section>
 				<section>
-					<h2>Contacts</h2>
+					<h2>Languages</h2>
 					<ul>
-						<li class="phone">
-							<a href="tel:+4915259003798">+49 152 5900 3798</a>
-						</li>
-						<li>
-							<a
-								href="mailto:artem@sapegin.me"
-								target="_blank"
-								rel="noopener noreferrer"
-								>artem@sapegin.me</a
-							>
-						</li>
-						<li>
-							<a
-								href="https://sapegin.me/"
-								target="_blank"
-								rel="noopener noreferrer"
-								>sapegin.me</a
-							>
-						</li>
-						<li>
-							<a
-								href="https://github.com/sapegin"
-								target="_blank"
-								rel="noopener noreferrer"
-								>github.com/sapegin</a
-							>
-						</li>
-						<li>
-							<a
-								href="https://www.linkedin.com/in/artemsapegin/"
-								target="_blank"
-								rel="noopener noreferrer"
-								>linkedin.com/in/artemsapegin</a
-							>
-						</li>
+						<li>English (fluent)</li>
+						<li>Russian (native)</li>
+						<li>German (basic)</li>
 					</ul>
-				</section>
-				<section>
-					<h2>Skills</h2>
-					<dl>
-						<dt>JavaScript</dt>
-						<dd>TypeScript, ES2023+, Node.js</dd>
-						<dt>CSS</dt>
-						<dd>Tailwind, styled-components, Sass, CSS Modules</dd>
-						<dt>Frameworks</dt>
-						<dd>React, React Native, Next.js, Astro</dd>
-						<dt>Testing</dt>
-						<dd>Jest, Vitest, React Testing Library, Playwright, Cypress</dd>
-						<dt>Practices</dt>
-						<dd>
-							Accessibility (WCAG), component libraries, CI/CD, AI-assisted
-							development
-						</dd>
-						<dt>Misc.</dt>
-						<dd>GraphQL, Storybook</dd>
-					</dl>
 				</section>
 			</aside>
 		</div>
 		<main class="main">
+			<section>
+				<h2>Skills</h2>
+				<dl class="details-list">
+					<dt>JavaScript</dt>
+					<dd>TypeScript, JavaScript (ES2023+), Node.js</dd>
+					<dt>React ecosystem</dt>
+					<dd>React, Next.js, React Native, Astro</dd>
+					<dt>CSS</dt>
+					<dd>
+						Tailwind CSS, CSS Modules, styled-components, Sass, responsive
+						layouts
+					</dd>
+					<dt>Testing</dt>
+					<dd>Vitest, Jest, React Testing Library, Cypress, Playwright</dd>
+					<dt>Design systems</dt>
+					<dd>Storybook, React Styleguidist, component libraries</dd>
+					<dt>Accessibility</dt>
+					<dd>
+						Web accessibility (WCAG 2.2), European Accessibility Act (EAA),
+						accessibility audit and testing
+					</dd>
+					<dt>Tooling and APIs</dt>
+					<dd>Webpack, Git, GitHub, GraphQL, REST</dd>
+					<dt>Practices</dt>
+					<dd>
+						Code review, mentoring, technical interviewing, CI/CD, AI-assisted
+						development, open source
+					</dd>
+				</dl>
+			</section>
 			<section class="work-experience">
 				<h2>Work experience</h2>
 				<article>
@@ -146,8 +191,8 @@
 						<p class="workplace__meta">
 							Senior frontend developer. Berlin, Germany. April 2024 to present
 						</p>
-						<dl>
-							<dt>Project:</dt>
+						<dl class="details-list">
+							<dt>Project</dt>
 							<dd>
 								<a
 									class="workplace__link"
@@ -158,7 +203,7 @@
 								>
 								(classical music streaming service).
 							</dd>
-							<dt>Tech stack:</dt>
+							<dt>Tech stack</dt>
 							<dd>
 								TypeScript, React.js, Next.js, Tailwind, GraphQL, React Testing
 								Library, Cypress, Playwright, Storybook.
@@ -212,10 +257,10 @@
 							Senior frontend developer. Berlin, Germany. December 2019 to March
 							2024
 						</p>
-						<dl>
-							<dt>Project:</dt>
+						<dl class="details-list">
+							<dt>Project</dt>
 							<dd>Omio web app (travel tickets booking).</dd>
-							<dt>Tech stack:</dt>
+							<dt>Tech stack</dt>
 							<dd>
 								TypeScript, React.js, React Native, styled-components, React
 								Testing Library, Cypress, Storybook, micro-frontends
@@ -269,12 +314,12 @@
 							Senior frontend developer. Berlin, Germany. January 2018 to
 							November 2019
 						</p>
-						<dl>
-							<dt>Projects:</dt>
+						<dl class="details-list">
+							<dt>Projects</dt>
 							<dd>
 								Wayfair web app (online furniture shop), supplier-facing tools.
 							</dd>
-							<dt>Tech stack:</dt>
+							<dt>Tech stack</dt>
 							<dd>Flow, React.js, Sass, Jest, Enzyme, GraphQL.</dd>
 						</dl>
 					</header>
@@ -317,10 +362,10 @@
 							Senior frontend developer. Berlin, Germany. July 2015 to December
 							2017
 						</p>
-						<dl>
-							<dt>Projects:</dt>
+						<dl class="details-list">
+							<dt>Projects</dt>
 							<dd>Internal tools.</dd>
-							<dt>Tech stack:</dt>
+							<dt>Tech stack</dt>
 							<dd>
 								React.js, Sass, CSS Modules, Jest, Enzyme, React Styleguidist.
 							</dd>
@@ -420,10 +465,6 @@
 					engineering). Open Technological Institute, Moscow, Russia. Graduated
 					2011.
 				</p>
-			</section>
-			<section>
-				<h2>Languages</h2>
-				<p>English (fluent), Russian (native), and German (basic).</p>
 			</section>
 		</main>
 	</body>

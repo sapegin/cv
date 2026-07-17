@@ -20,6 +20,8 @@ const pdf = await page.pdf({
 	format: 'A4',
 	// We need this for list item markers that use background-color
 	printBackground: true,
+	// Tagged PDF exposes a structure tree for accessibility tools and some ATS parsers
+	tagged: true,
 });
 
 fs.writeFileSync(options.out, pdf);

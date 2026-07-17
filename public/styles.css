@@ -21,6 +21,16 @@
 	--line-height-body: 1.4;
 	--line-height-heading: 1.2;
 	--sidebar-width: 100%;
+	--section-gap: var(--space-l);
+	--block-gap: var(--space-m);
+	--list-item-gap: var(--space-s);
+	--header-title-size: var(--font-size-xxxl);
+	--header-block-gap: var(--space-m);
+	--header-margin-bottom: var(--space-l);
+	--heading-size: var(--font-size-xxl);
+	--heading-margin: var(--space-m);
+	--workplace-margin: var(--space-m);
+	--job-title-gap: 0;
 }
 
 * {
@@ -57,7 +67,6 @@ a:focus {
 
 li {
 	list-style-type: none;
-	page-break-inside: avoid;
 }
 
 .sidebar {
@@ -69,23 +78,38 @@ li {
 }
 
 .header {
-	margin-bottom: var(--space-l);
+	margin-bottom: var(--header-margin-bottom);
 	line-height: var(--line-height-heading);
 	display: flex;
 	flex-direction: column;
-	gap: var(--space-m);
+	gap: var(--header-block-gap);
 }
 .header h1 {
 	line-height: 0.9;
-	font-size: var(--font-size-xxxl);
+	font-size: var(--header-title-size);
 	font-weight: normal;
 }
-.subtitle {
+.header-field {
+	font-size: var(--font-size-m);
+}
+.header-field--title {
 	font-size: var(--font-size-xl);
 	font-weight: bold;
 }
-.location {
-	font-size: var(--font-size-m);
+.header-field__label {
+	font-weight: bold;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }
 
 .button {
@@ -110,17 +134,22 @@ li {
 	background-color: var(--color-hover);
 }
 
-.aside h2 {
-	margin-bottom: var(--space-m);
+.aside h2,
+.main h2 {
+	margin-bottom: var(--heading-margin);
 	line-height: var(--line-height-heading);
-	font-size: var(--font-size-xxl);
+	font-size: var(--heading-size);
 	font-weight: normal;
 }
-.aside section {
-	margin-bottom: var(--space-l);
+.aside section,
+.main section {
+	margin-bottom: var(--section-gap);
+}
+.main section:last-child {
+	margin-bottom: 0;
 }
 .aside p {
-	margin-bottom: var(--space-m);
+	margin-bottom: var(--block-gap);
 }
 .aside ul {
 	padding: 0;
@@ -128,15 +157,10 @@ li {
 }
 .aside li {
 	padding: 0;
-	margin-bottom: var(--space-s);
+	margin-bottom: var(--list-item-gap);
 }
-.aside dt {
-	margin-bottom: var(--space-xxs);
+.contact-meta__label {
 	font-weight: bold;
-}
-.aside dd {
-	margin-bottom: var(--space-s);
-	hyphens: none;
 }
 .aside__looking {
 	font-weight: bold;
@@ -146,33 +170,25 @@ li {
 	padding: var(--space-m);
 }
 
-.main section {
-	margin-bottom: var(--space-l);
-}
-.main section:last-child {
-	margin-bottom: 0;
-}
-.main h2 {
-	margin-bottom: var(--space-m);
-	line-height: var(--line-height-heading);
-	font-size: var(--font-size-xxl);
-	font-weight: normal;
-}
-.main dl {
+.details-list {
 	display: grid;
 	grid-template-columns: auto 1fr;
 	gap: var(--space-xxs) var(--space-s);
 	font-size: var(--font-size-s);
 	margin-top: var(--space-s);
 }
-.main dt {
+.details-list dt {
 	font-weight: bold;
 }
+.details-list dt::after {
+	content: ': ';
+}
+
 .main section > p,
 .main article > p,
 .main ul {
 	font-size: var(--font-size-s);
-	margin-bottom: var(--space-m);
+	margin-bottom: var(--block-gap);
 }
 .main section > p:last-child,
 .main article > p:last-child,
@@ -181,7 +197,7 @@ li {
 }
 .main li {
 	position: relative;
-	margin-bottom: var(--space-s);
+	margin-bottom: var(--list-item-gap);
 	padding-left: 0.85em;
 }
 .main li::before {
@@ -195,7 +211,7 @@ li {
 }
 
 .work-experience article {
-	margin-bottom: var(--space-l);
+	margin-bottom: var(--section-gap);
 }
 .work-experience h4 {
 	margin-bottom: var(--space-s);
@@ -205,14 +221,17 @@ li {
 }
 
 .workplace {
-	margin-bottom: var(--space-m);
+	margin-bottom: var(--workplace-margin);
 	line-height: var(--line-height-heading);
 	font-size: var(--font-size-m);
 }
 .workplace__name {
-	margin: 0 0.4em 0 0;
+	margin: var(--job-title-gap) 0.4em 0 0;
 	font-size: var(--font-size-l);
 	font-weight: bold;
+}
+.work-experience article:first-of-type .workplace__name {
+	margin-top: 0;
 }
 .workplace__link {
 	text-decoration: none;
@@ -226,7 +245,7 @@ li {
 	font-style: italic;
 }
 
-@media (min-width: 35rem) {
+@media screen and (min-width: 35rem) {
 	:root {
 		--sidebar-width: 25%;
 	}
@@ -239,7 +258,7 @@ li {
 		display: none;
 	}
 }
-@media print, (min-width: 60rem) {
+@media screen and (min-width: 60rem) {
 	.work-experience ul {
 		columns: 2;
 		column-gap: var(--space-s);
@@ -261,59 +280,122 @@ li {
 		--font-size-xs: 0.8rem;
 		--font-size-s: 0.9rem;
 		--font-size-m: 1rem;
-		--sidebar-width: 32%;
+		--section-gap: var(--space-m);
+		--block-gap: var(--space-s);
+		--list-item-gap: var(--space-xxs);
+		--header-title-size: var(--font-size-xxl);
+		--header-block-gap: var(--space-s);
+		--header-margin-bottom: var(--space-m);
+		--heading-size: var(--font-size-xl);
+		--heading-margin: var(--space-s);
+		--workplace-margin: var(--space-s);
+		--job-title-gap: 0.65em;
 	}
+
 	@page {
 		size: A4 portrait;
 		margin: 0.5cm 1cm;
+	}
+
+	html {
+		font-size: 11pt;
 	}
 	html,
 	body {
 		width: 210mm;
 		hyphens: none;
 	}
-	html {
-		font-size: 11pt;
-	}
 	body {
-		flex-wrap: nowrap;
+		display: block;
 	}
-	.sidebar {
-		padding: 0 1cm 0 0;
-		border-right: 1px solid var(--color-border);
+	.sidebar,
+	.main {
+		width: 100%;
+		max-width: none;
+		padding: 0;
+		border: none;
 		background-color: initial;
 	}
-	.main {
-		padding: 0 0 0 1cm;
-	}
+
 	.no-print {
 		display: none;
 	}
+	.phone {
+		display: list-item;
+	}
+	.sr-only {
+		position: static;
+		width: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		clip: auto;
+		white-space: normal;
+	}
+
 	a {
 		text-decoration: none;
 	}
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		page-break-inside: avoid;
-		page-break-after: avoid;
+
+	.details-list {
+		display: block;
+		margin-top: 0;
 	}
-	article,
-	p,
-	blockquote,
-	li,
-	dl,
-	tr,
-	img {
-		page-break-inside: avoid;
+	.details-list dt {
+		display: inline;
 	}
-	p,
-	h2,
-	h3 {
-		orphans: 3;
-		widows: 3;
+	.details-list dd {
+		display: inline;
+		margin: 0;
+	}
+	.details-list dd::after {
+		content: '';
+		display: block;
+		margin-bottom: 0.2em;
+	}
+
+	.work-experience article,
+	.work-experience .workplace {
+		display: contents;
+	}
+	.work-experience ul {
+		columns: 1;
+	}
+
+	.main li {
+		position: static;
+		padding-left: 0;
+	}
+	.main li::before {
+		position: static;
+		display: inline;
+		width: auto;
+		height: auto;
+		background-color: transparent;
+		content: '\2022\00a0';
+	}
+
+	:where(
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		article,
+		p,
+		blockquote,
+		li,
+		dl,
+		tr,
+		img,
+		ul,
+		.workplace
+	) {
+		break-inside: auto;
+		break-before: auto;
+		break-after: auto;
+	}
+	h1 {
+		break-inside: avoid;
 	}
 }
