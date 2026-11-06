@@ -22,8 +22,8 @@
 				"telephone": "+49 152 5900 3798",
 				"address": {
 					"@type": "PostalAddress",
-					"addressLocality": "Berlin",
-					"addressCountry": "Germany"
+					"addressLocality": "Valencia",
+					"addressCountry": "Spain"
 				}
 			}
 		</script>
@@ -47,9 +47,6 @@
 				<section>
 					<h2>Contacts</h2>
 					<ul>
-						<li class="contact-meta">
-							<span class="contact-meta__label sr-only">Location:</span>
-						</li>
 						<li class="phone">
 							<a href="tel:+4915259003798">+49 152 5900 3798</a>
 						</li>
@@ -86,6 +83,10 @@
 							>
 						</li>
 						<li class="contact-meta">
+							<span class="contact-meta__label sr-only">Location:</span>
+							Valencia, Spain
+						</li>
+						<li class="contact-meta">
 							<span class="contact-meta__label sr-only"
 								>Work authorization:</span
 							>
@@ -98,13 +99,14 @@
 						I’ve been developing frontends for web applications serving millions
 						of users since 2006. I&nbsp;care about code maintenance, user
 						experience, and&nbsp;accessibility. I like to work closely with
-						designers, and make component libraries. I created
+						designers and make component libraries. I created
 						<a
 							href="https://react-styleguidist.js.org/"
 							target="_blank"
 							rel="noopener noreferrer"
 							>React Styleguidist</a
-						>, and published
+						>
+						and published
 						<a
 							href="https://sapegin.me/book/"
 							target="_blank"
@@ -116,7 +118,7 @@
 					<p class="aside__looking no-print">
 						I’m looking for remote or work-from-home roles.
 					</p>
-					<p>
+					<p class="no-print">
 						When I’m not writing code, I&nbsp;<a
 							href="https://sapegin.me/photos/"
 							target="_blank"
@@ -137,6 +139,7 @@
 						<li>English (fluent)</li>
 						<li>Russian (native)</li>
 						<li>German (basic)</li>
+						<li>Spanish (very little)</li>
 					</ul>
 				</section>
 			</aside>
@@ -161,16 +164,37 @@
 					<dt>Accessibility</dt>
 					<dd>
 						Web accessibility (WCAG 2.2), European Accessibility Act (EAA),
-						accessibility audit and testing
+						accessibility audit and testing, semantic HTML, ARIA
 					</dd>
 					<dt>Tooling and APIs</dt>
 					<dd>Webpack, Git, GitHub, GraphQL, REST, OpenAI API, chatbots</dd>
 					<dt>Practices</dt>
 					<dd>
-						Code review, mentoring, technical interviewing, CI/CD, AI-assisted
-						development, open source
+						Code review, mentoring, technical interviewing, CI/CD, AI-assisted /
+						agentic development (Cursor, Pi, Claude), open source
 					</dd>
 				</dl>
+			</section>
+			<section>
+				<h2>Main expertise</h2>
+				<ul>
+					<li>20+ years of frontend experience</li>
+					<li>React and TypeScript</li>
+					<li>
+						Accessibility (WCAG, EU Accessibility Act, accessibility audit of
+						existing apps)
+					</li>
+					<li>
+						Component libraries and design systems (establishing a component
+						library on an existing app, design tokens, documentation, Storybook,
+						working with designers)
+					</li>
+					<li>
+						AI-assisted development using custom skills that support planning,
+						clean up slop, and prepare code for human review and shipping, and a
+						custom Ghostty-based terminal emulator with AI agent support
+					</li>
+				</ul>
 			</section>
 			<section class="work-experience">
 				<h2>Work experience</h2>
@@ -205,35 +229,34 @@
 							<dt>Tech stack</dt>
 							<dd>
 								TypeScript, React.js, Next.js, Tailwind, GraphQL, React Testing
-								Library, Cypress, Playwright, Storybook.
+								Library, Cypress, Playwright, Vitest, Storybook.
 							</dd>
 						</dl>
 					</header>
 					<ul>
 						<li>
-							Introduced Storybook and started a component library to make
-							components more discoverable for developers and designers.
+							Introduced Storybook and built a component library of about 30
+							components, aligned with the designers’ Figma library to improve
+							consistency and reduce custom styles.
 						</li>
 						<li>
-							Created multiple new components and aligned existing ones with
-							designers’ Figma component library to significantly improve
-							consistency across the app and remove a lot of custom styles.
+							Built about 20 marketing components with Storybook docs, cutting
+							new campaign landing pages from about 1 month to 1–2 days; shipped
+							10+ campaign pages and a new homepage. Later set up a CMS workflow
+							so marketing can publish multiple pages per month without engineer
+							involvement.
 						</li>
 						<li>
-							Built a collection of marketing components with Storybook docs,
-							cutting new campaign landing pages from 1 month to 1–2 days;
-							shipped 10+ campaign pages and a new homepage. Later set up a
-							fully automated CMS workflow so marketing can publish new pages
-							within hours without frontend involvement.
+							Replaced a 15-step manual deployment process (plus an extra pull
+							request approval) with a fully automated GitHub Actions workflow,
+							so any developer can deploy changes themselves.
 						</li>
 						<li>
-							Accessibility champion: made the app accessible using keyboard and
-							screen reader (among many other fixes) in preparation for European
-							Accessibility Act (EAA).
-						</li>
-						<li>
-							Did accessibility reviews and provided guidance for my teammates.
-							Added keyboard accessibility tests for main app flows.
+							Accessibility champion for European Accessibility Act (EAA)
+							readiness: audit, 30+ fixes (keyboard, screen reader, motion
+							safety), ongoing teammate reviews and guidance; added keyboard
+							accessibility tests for main app flows. Scanners now report no
+							real issues.
 						</li>
 					</ul>
 				</article>
@@ -258,41 +281,37 @@
 						</p>
 						<dl class="details-list">
 							<dt>Project</dt>
-							<dd>Omio web app (travel tickets booking).</dd>
+							<dd>Omio web app (travel ticket booking).</dd>
 							<dt>Tech stack</dt>
 							<dd>
 								TypeScript, React.js, React Native, styled-components, React
-								Testing Library, Cypress, Storybook, micro-frontends
-								architecture.
+								Testing Library, Cypress, Storybook.
 							</dd>
 						</dl>
 					</header>
 					<ul>
 						<li>
-							Introduced modern testing tools and practices to one of my teams.
+							Led frontend for the booking cancellation experience on React
+							Native and web, with a shared codebase across platforms.
 						</li>
 						<li>
-							Added primitive layout components based on styled-system to the
-							company component library to simplify the creation of layouts and
-							user interfaces.
+							Took a team from no automated checks to a full setup for linting,
+							formatting, unit tests, and integration tests, so developers could
+							catch issues early and avoid regressions.
 						</li>
 						<li>
-							Contributions to the company component library, including multiple
-							new components, TypeScript migration, documentation, and
-							accessibility fixes.
+							Contributed to the company component library: layout primitives
+							(styled-system), new components, TypeScript migration,
+							documentation, accessibility fixes, and reviews.
 						</li>
 						<li>
-							Did code reviews inside the team and for the company component
-							library.
+							Conducted over 40 interviews with frontend developers of various
+							levels for all teams (technical questions, coding exercises, and
+							architecture interviews).
 						</li>
 						<li>
-							Conducted dozens of interviews with frontend developers of various
-							levels for all teams: technical and behavioral questions, coding
-							exercises.
-						</li>
-						<li>
-							Mentored less senior teammates using code reviews, and supervised
-							their work.
+							Mentored less senior teammates through code reviews and
+							supervision.
 						</li>
 					</ul>
 				</article>
@@ -324,23 +343,24 @@
 					</header>
 					<ul>
 						<li>
-							Participated in JavaScript and CSS working groups, where I worked
-							on company-wide coding standards and documentation for developers.
+							Participated in JavaScript and CSS working groups on company-wide
+							coding standards and documentation; one of three CSS reviewers in
+							Berlin.
 						</li>
 						<li>
-							Helped other developers with frontend questions during frontend
-							office hours.
+							Spent about 1–2 hours a day on code reviews across Berlin teams
+							(peaks of 20+ reviews in a day); also live reviews, pairing, and
+							weekly frontend office hours.
 						</li>
 						<li>
-							Did code reviews, live reviews, and pair programming sessions with
-							developers in all Berlin teams.
+							Improved the seller tools developer experience: set up JavaScript
+							exception monitoring and contributed to company-wide React
+							component libraries.
 						</li>
 						<li>
-							Made many contributions to company-wide React component libraries.
-						</li>
-						<li>
-							Held internal brown bag talks: internationalization, types in
-							JavaScript with Flow.
+							Sponsored engineers through the JS Proficiency program; held brown
+							bag talks on internationalization and types in JavaScript with
+							Flow.
 						</li>
 					</ul>
 				</article>
@@ -354,7 +374,9 @@
 								rel="noopener noreferrer"
 							>
 								HERE Technologies
-								<span class="workplace__site">(<u>here.com</u>)</span>
+								<span class="workplace__site"
+									>(formerly Nokia, <u>here.com</u>)</span
+								>
 							</a>
 						</h3>
 						<p class="workplace__meta">
@@ -363,7 +385,10 @@
 						</p>
 						<dl class="details-list">
 							<dt>Projects</dt>
-							<dd>Internal tools.</dd>
+							<dd>
+								Internal tools, including a translator tool for localizing UI
+								across HERE apps.
+							</dd>
 							<dt>Tech stack</dt>
 							<dd>
 								React.js, Sass, CSS Modules, Jest, Enzyme, React Styleguidist.
@@ -372,21 +397,24 @@
 					</header>
 					<ul>
 						<li>
-							Introduced modern frontend stack to the team: React, ES6, CSS
-							Modules, webpack.
+							Introduced a modern frontend stack to the team: React, ES6, CSS
+							Modules, webpack, linting, formatting, and testing.
 						</li>
 						<li>
-							Introduced linting, code formatting, and frontend testing to the
-							team.
+							Rebuilt the translator tool from a vanilla jQuery server-rendered
+							app to a React single-page app.
 						</li>
 						<li>
-							Created a component library with over 70 components used by 5
-							projects.
+							Created a component library of over 70 components used by 5
+							projects, documented with React Styleguidist (open-source tool I
+							created); backend engineers built new UIs with minimal frontend
+							supervision.
 						</li>
 						<li>
-							Converted a vanilla jQuery server rendered app to React single
-							page app, and created several React apps from scratch.
+							Automated production deploys from an 8-step manual process to a
+							single command.
 						</li>
+						<li>Created several other React apps from scratch.</li>
 					</ul>
 				</article>
 				<article>
@@ -426,7 +454,7 @@
 				</article>
 			</section>
 			<section>
-				<h2>Talks, workshops and books</h2>
+				<h2>Additional experience and projects</h2>
 				<ul>
 					<li>
 						Speaking at conferences and giving workshops on design systems in
@@ -449,12 +477,13 @@
 					</li>
 					<li>
 						Wrote a book on clean code for frontend developers (<a
-							href="https://blog.sapegin.me/book/"
+							href="https://sapegin.me/book/"
 							target="_blank"
 							rel="noopener noreferrer"
-							>blog.sapegin.me/book</a
+							>sapegin.me/book</a
 						>).
 					</li>
+					<li>Lots of open-source experience.</li>
 				</ul>
 			</section>
 			<section>
